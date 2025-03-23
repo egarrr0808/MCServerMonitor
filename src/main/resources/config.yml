@@ -1,0 +1,38 @@
+# ServerMonitor Configuration
+
+# Display settings
+settings:
+  # Color scheme: default, dark, light
+  color_scheme: default
+  # Show plugin prefix in messages
+  show_prefix: true
+  # Debug mode (enables additional logging)
+  debug: false
+
+# Performance thresholds
+thresholds:
+  # CPU usage thresholds (percentage)
+  cpu:
+    warning: 60
+    critical: 85
+  # Memory usage thresholds (percentage)
+  memory:
+    warning: 60
+    critical: 85
+  # TPS thresholds
+  tps:
+    warning: 15
+    critical: 10
+  # Ping thresholds (milliseconds)
+  ping:
+    warning: 100
+    critical: 250
+
+# Monitoring settings
+monitoring:
+  # Enable automatic monitoring alerts
+  enable_alerts: false
+  # Alert interval in seconds (minimum 60)
+  alert_interval: 300
+  # Who should receive alerts (console, ops, all)
+  alert_recipients: ops

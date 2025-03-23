@@ -1,0 +1,19 @@
+name: ServerMonitor
+version: 1.0
+main: com.servermonitor.ServerMonitor
+api-version: '1.21'
+description: A plugin that displays server performance metrics
+author: Manus
+commands:
+  servermonitor:
+    description: Displays server performance metrics
+    usage: /servermonitor [cpu|memory|tps|ping|all]
+    aliases: [sm, monitor, perf]
+    permission: servermonitor.use
+permissions:
+  servermonitor.use:
+    description: Allows using the servermonitor command
+    default: op
+  servermonitor.reload:
+    description: Allows reloading the plugin configuration
+    default: op
