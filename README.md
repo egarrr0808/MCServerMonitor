@@ -17,7 +17,7 @@ ServerMonitor is a performance monitoring plugin for Minecraft Paper servers. It
 
 ## Installation
 
-1. Download the latest version of the plugin from the [Releases](https://github.com/yourusername/ServerMonitor/releases) section
+1. Download the latest version of the plugin from the [Releases](https://github.com/egarrr0808/MCServerMonitor/releases/tag/plugin) section
 2. Place the JAR file in the `plugins` folder of your Minecraft server
 3. Restart the server or use the `/reload confirm` command
 4. Done! Use the plugin commands to monitor your server
