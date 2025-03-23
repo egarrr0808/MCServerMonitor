@@ -1,87 +1,87 @@
 # ServerMonitor
 
-ServerMonitor - это плагин для мониторинга производительности Minecraft серверов на платформе Paper. Плагин предоставляет удобный интерфейс для отслеживания ключевых метрик сервера через игровые команды.
+ServerMonitor is a performance monitoring plugin for Minecraft Paper servers. It provides a convenient interface for tracking key server metrics through in-game commands.
 
-## Возможности
+## Features
 
-- **Мониторинг CPU**: отображение загрузки процессора и количества доступных ядер
-- **Мониторинг памяти**: отображение использованной, свободной и общей памяти
-- **Мониторинг TPS**: отображение тиков в секунду за разные периоды времени
-- **Мониторинг пинга**: отображение пинга всех игроков на сервере
-- **Информация о сервере**: отображение версии, времени работы, загруженных чанков и сущностей
+- **CPU Monitoring**: Display processor usage and available cores
+- **Memory Monitoring**: Display used, free, and total memory
+- **TPS Monitoring**: Display ticks per second over different time periods
+- **Ping Monitoring**: Display ping for all players on the server
+- **Server Information**: Display version, uptime, loaded chunks, and entities
 
-## Требования
+## Requirements
 
-- Minecraft сервер Paper 1.21.4 или выше
-- Java 17 или выше
+- Minecraft Paper server 1.21.4 or higher
+- Java 17 or higher
 
-## Установка
+## Installation
 
-1. Скачайте последнюю версию плагина из раздела [Releases](https://github.com/yourusername/ServerMonitor/releases)
-2. Поместите JAR-файл в папку `plugins` вашего Minecraft сервера
-3. Перезапустите сервер или используйте команду `/reload confirm`
-4. Готово! Используйте команды плагина для мониторинга сервера
+1. Download the latest version of the plugin from the [Releases](https://github.com/yourusername/ServerMonitor/releases) section
+2. Place the JAR file in the `plugins` folder of your Minecraft server
+3. Restart the server or use the `/reload confirm` command
+4. Done! Use the plugin commands to monitor your server
 
-## Команды
+## Commands
 
-- `/servermonitor` или `/sm` - Базовая команда плагина
-- `/sm help` - Показывает список доступных команд
-- `/sm cpu` - Показывает информацию о загрузке CPU
-- `/sm memory` - Показывает информацию об использовании памяти
-- `/sm tps` - Показывает текущий TPS (тики в секунду) сервера
-- `/sm ping` - Показывает пинг всех игроков на сервере
-- `/sm all` - Показывает все метрики сразу
-- `/sm reload` - Перезагружает конфигурацию плагина (требуется разрешение servermonitor.reload)
+- `/servermonitor` or `/sm` - Base plugin command
+- `/sm help` - Shows a list of available commands
+- `/sm cpu` - Shows CPU usage information
+- `/sm memory` - Shows memory usage information
+- `/sm tps` - Shows current TPS (ticks per second) of the server
+- `/sm ping` - Shows ping for all players on the server
+- `/sm all` - Shows all metrics at once
+- `/sm reload` - Reloads the plugin configuration (requires servermonitor.reload permission)
 
-## Разрешения
+## Permissions
 
-- `servermonitor.use` - Разрешает использовать основные команды плагина (по умолчанию для операторов)
-- `servermonitor.reload` - Разрешает перезагружать конфигурацию плагина (по умолчанию для операторов)
+- `servermonitor.use` - Allows using the basic plugin commands (default for operators)
+- `servermonitor.reload` - Allows reloading the plugin configuration (default for operators)
 
-## Конфигурация
+## Configuration
 
-Файл конфигурации `config.yml` создается автоматически при первом запуске плагина. Вы можете настроить:
+The `config.yml` file is created automatically on first launch. You can configure:
 
 ```yaml
-# Настройки отображения
+# Display settings
 settings:
-  # Цветовая схема: default, dark, light
+  # Color scheme: default, dark, light
   color_scheme: default
-  # Показывать префикс плагина в сообщениях
+  # Show plugin prefix in messages
   show_prefix: true
-  # Режим отладки (включает дополнительное логирование)
+  # Debug mode (enables additional logging)
   debug: false
 
-# Пороговые значения производительности
+# Performance thresholds
 thresholds:
-  # Пороги использования CPU (в процентах)
+  # CPU usage thresholds (percentage)
   cpu:
     warning: 60
     critical: 85
-  # Пороги использования памяти (в процентах)
+  # Memory usage thresholds (percentage)
   memory:
     warning: 60
     critical: 85
-  # Пороги TPS
+  # TPS thresholds
   tps:
     warning: 15
     critical: 10
-  # Пороги пинга (в миллисекундах)
+  # Ping thresholds (milliseconds)
   ping:
     warning: 100
     critical: 250
 
-# Настройки мониторинга
+# Monitoring settings
 monitoring:
-  # Включить автоматические оповещения о мониторинге
+  # Enable automatic monitoring alerts
   enable_alerts: false
-  # Интервал оповещений в секундах (минимум 60)
+  # Alert interval in seconds (minimum 60)
   alert_interval: 300
-  # Кто должен получать оповещения (console, ops, all)
+  # Who should receive alerts (console, ops, all)
   alert_recipients: ops
 ```
 
-## Структура проекта
+## Project Structure
 
 ```
 ServerMonitor/
@@ -100,21 +100,21 @@ ServerMonitor/
 └── .gitignore
 ```
 
-## Сборка из исходников
+## Building from Source
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 ```
 git clone https://github.com/yourusername/ServerMonitor.git
 ```
 
-2. Соберите проект с помощью Maven:
+2. Build the project with Maven:
 ```
 cd ServerMonitor
 mvn clean package
 ```
 
-3. Готовый JAR-файл будет находиться в папке `target/`
+3. The compiled JAR file will be in the `target/` folder
 
-## Лицензия
+## License
 
-Этот проект распространяется под лицензией MIT. Подробности смотрите в файле [LICENSE](LICENSE).
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
